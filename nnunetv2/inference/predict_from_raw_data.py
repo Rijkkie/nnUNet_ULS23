@@ -87,7 +87,7 @@ class nnUNetPredictor(object):
                                     map_location=torch.device('cpu'), weights_only=False)
             if i == 0:
                 trainer_name = checkpoint['trainer_name']
-                configuration_name = checkpoint['init_args']['configuration']
+                configuration_name = "3d_fullres"
                 inference_allowed_mirroring_axes = checkpoint['inference_allowed_mirroring_axes'] if \
                     'inference_allowed_mirroring_axes' in checkpoint.keys() else None
 
